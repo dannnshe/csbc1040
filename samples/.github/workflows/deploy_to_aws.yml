@@ -1,0 +1,18 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Set up deployment environment, add any setup steps if needed
+
+      - name: Deploy to AWS
+        run: |
+          # Add commands to deploy to AWS, like using AWS CLI
+          # Ensure AWS credentials are configured as secrets
